@@ -36,11 +36,12 @@ def main(argc: int, argv: list) -> int:
     """
         This is the main function of my program.
     """
+    sys.tracebacklimit = 0
     assert argc < 3, "Invalid number of arguments, 1 expected."
     try:
         if argc == 1:
             print("What is the text to count?")
-            text = input()
+            text = input() + "\n"
         else:
             text = argv[1]
         print_info(text)
