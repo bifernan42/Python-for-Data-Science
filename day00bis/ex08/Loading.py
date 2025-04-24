@@ -31,9 +31,9 @@ def ft_tqdm(lst: range) -> None:
             tqdm_bar = "=" * int(stash) #formule pas mal, on le fera sans stash
         
         if i != lst[-1]:
-            print(f"{progress}%|[{tqdm_bar:64}]|\r", end="", flush=True)
+            print(f"{progress}%|[{tqdm_bar:64}]| {it_count}/{it_max}\r", end="", flush=True)
         else:
-            print(f"{progress}%|[{tqdm_bar:63}>]|", end="", flush=True)
+            print(f"{progress}%|[{tqdm_bar:63}>]| {it_count}/{it_max}", end="", flush=True)
         #yield i
     print("\n")
     print("CHARS PER ITERATION :" + str(cpi))
@@ -46,4 +46,4 @@ def ft_tqdm(lst: range) -> None:
 #for i in ft_tqdm(range(22)):
  #   time.sleep(0.25)
 
-ft_tqdm(range(500))
+ft_tqdm(range(250))
